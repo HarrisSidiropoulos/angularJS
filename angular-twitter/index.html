@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="Twitter">
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS Resolve</title>
+    <script type="text/javascript" src="assets/lib/angular-1.0.2/angular.js"></script>
+    <script type="text/javascript" src="assets/lib/angular-1.0.2/angular-resource.js"></script>
+    <script type="text/javascript" src="assets/js/twitter.js"></script>
+
+    <link rel="stylesheet" href="assets/lib/bootstrap-2.1.1/css/bootstrap.css"/>
+</head>
+<body>
+    <div ng-controller="TwitterCtrl">
+        <form class="form-horizontal">
+            <input type="text" ng-model="searchTerm">
+            <button class="btn" ng-click="doSearch()"><i class="icon-search"></i> Search</button>
+        </form>
+        <table class="table table-striped">
+            <tr ng-repeat="tweet in twitterResult.results">
+                <td>{{tweet.text}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
