@@ -1,5 +1,5 @@
 angular.module('components', [])
-    .directive('sGallery', function($http, $parse) {
+    .directive('sGallery', function($http, $parse, $compile) {
         return {
             restrict: 'E',
             scope: {
@@ -52,11 +52,21 @@ angular.module('components', [])
                     }
 
                     compileElement.bind('dblclick', function() {
-                        console.log('dblclick');
                         if (typeof attrs.src==="undefined") return;
-                        $parse(attrs.src).assign(scope, 'assets/data/images.json');
+                        setAttributeValue('src', 'assets/data/images.json');
+                        //$parse(attrs.src).assign(scope, 'assets/data/images.json');
                     })
 
+                    function setAttributeValue(attr, value) {
+                        if (typeof attrs[attr]==="undefined") return;
+                        if (attrs[attr].indexOf('{{')==0 && attrs[attr].indexOf('}}')==attrs[attr].length-2) {
+                            var bindVar = attrs[attr].substr(2,attrs[attr].length-4);
+                            scope.$parent[bindVar] = value;
+                            scope.$parent.$apply();
+                        } else {
+                            attrs.$set(attr, value);
+                        }
+                    }
 
                 }
             }
