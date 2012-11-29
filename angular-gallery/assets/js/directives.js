@@ -64,7 +64,9 @@ angular.module('components', [])
                             scope.$parent[bindVar] = value;
                             scope.$parent.$apply();
                         } else {
+                            scope.src = value;
                             attrs.$set(attr, value);
+                            scope.$apply();
                         }
                     }
 
