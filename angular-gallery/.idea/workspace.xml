@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6454bdf-c050-4eef-83dc-c684dd9dd156" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/directives.js" afterPath="$PROJECT_DIR$/assets/js/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-    </list>
+    <list default="true" id="a6454bdf-c050-4eef-83dc-c684dd9dd156" name="Default" comment="" />
     <ignored path="angular-gallery.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,7 +50,7 @@
       <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="46" selection-start="3111" selection-end="3111" vertical-scroll-proportion="0.79761904">
+            <state line="68" column="43" selection-start="3208" selection-end="3208" vertical-scroll-proportion="0.83809525">
               <folding />
             </state>
           </provider>
@@ -482,7 +478,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="46" selection-start="3111" selection-end="3111" vertical-scroll-proportion="0.79761904">
+        <state line="68" column="43" selection-start="3208" selection-end="3208" vertical-scroll-proportion="0.83809525">
           <folding />
         </state>
       </provider>
