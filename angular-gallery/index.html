@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org" lang="en" ng-app="Gallery">
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS Gallery</title>
+    <link rel="stylesheet" href="assets/lib/bootstrap-2.1.1/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <!-- When you load angular at the bottom, you need to create the "ng-cloak" rules yourself -->
+    <style type="text/css">
+        @charset "UTF-8";
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none;
+        }
+
+        ng\:form {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div ng-controller="GalleryCTR">
+    <input ng-model="imagesSrc"><br>
+    <s-gallery src="{{imagesSrc}}" images-path="images/"></s-gallery>
+    <s-gallery src="assets/data/images.json" images-path="images/"></s-gallery>
+    <s-gallery images-data="images2" images-path="images/"></s-gallery>
+</div>
+
+<script type="text/javascript" src="assets/lib/angular-1.0.2/angular.js"></script>
+<script type="text/javascript" src="assets/lib/angular-1.0.2/angular-resource.js"></script>
+<script type="text/javascript" src="assets/lib/jquery-1.8.1/jquery-1.8.1.js"></script>
+<script type="text/javascript" src="assets/lib/bootstrap-2.1.1/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/lib/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="assets/js/directives.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>

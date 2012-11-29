@@ -1,0 +1,31 @@
+.s-gallery {
+    float: left;
+}
+.s-gallery-large-image {
+    width: 615px;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.s-gallery-list {
+    float: left;
+    width: 610px;
+    margin: 0px;
+    overflow: auto;
+}
+.s-gallery-list-container {
+    list-style: none;
+    width: 6000px;
+    margin: 0px;
+}
+.s-gallery-list-container li {
+    float: left;
+    cursor: pointer;
+    padding-right: 5px;
+}
+.s-gallery-list-container li.selected {
+    opacity: .5;
+}
+.s-gallery-list-container li:last-child {
+    padding-right: 0px;
+}

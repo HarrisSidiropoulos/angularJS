@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>file uploader</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="assets/lib/bootstrap-2.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/lib/bootstrap-2.1.1/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <script type="text/javascript" src="assets/lib/jquery-1.8.1/jquery-1.8.1.js"></script>
+        <script type="text/javascript" src="assets/lib/bootstrap-2.1.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/lib/fileUploader/FileUploader.js"></script>
+        <script type="text/javascript" src="assets/js/fileUploadMulti.js"></script>
+    </head>
+    <body class="container">
+        <div id="toolbar" class="well">
+            <div id="manageFilesGroup">
+                <input type="button" id="addFilesBtn" value="Add Files" class="btn"/>
+                <input type="file" id="filesInput" class="input-file" multiple/>
+                <input type="button" id="removeFilesBtn" value="Remove Selected Files" class="btn disabled"/>
+            </div>
+            <span id="infoLog" class="label label-info hidden">Total time remaining : <span id="timeRemaining"></span></span>
+            <div class="pull-right">
+                <input type="button" id="uploadFilesButton" value="Upload" class="btn primary disabled"/>
+            </div>
+        </div>
+        <div id="thumbNailsPanel" class="well">
+            <ul class="thumbnails">
+                <li class="hidden">
+                    <a class="thumbnail" href="javascript:">
+                        <div class="image-container">
+                            <img src="assets/img/153x120.gif" alt="">
+                        </div>
+                        <div class="caption">
+                            <div class="progress progress-striped" style="position: relative; height: 5px; top: -5px; left: 0px; margin-bottom: 0px;">
+                                <div class="bar" style="width: 0%;"></div>
+                            </div>
+                            <h5 style="margin-top: 4px;">Thumbnail label</h5>
+                        </div>
+                    </a>
+                    <div class="loading hidden"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="dropZone" class="well hide">
+            <div id="dragDialog">
+                <p id="dragMessage">{Drag &amp; drop files here}</p>
+                <p id="dropMessage">{Drop files here}</p>
+            </div>
+        </div>
+        <div class="modal hide" id="myAlert">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Error</h3>
+            </div>
+            <div class="modal-body">
+                <p>One fine body…</p>
+            </div>
+            <div class="modal-footer">
+                <label class="checkbox inline pull-left">
+                    <input type="checkbox" id="overwriteAllCheckBox" />
+                    Do this action for all conflicts
+                </label>
+                <a href="#" id="cancelBtn" class="btn" data-dismiss="modal">Cancel</a>
+                <a href="#" id="oklBtn" class="btn btn-primary">Ok</a>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,100 @@
+body {
+
+}
+.caption h5 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 134px;
+}
+#toolbar {
+    position: relative;
+}
+#thumbNailsPanel {
+    overflow: auto;
+}
+
+.thumbnails {
+    text-align: center;
+    /*display: none;*/
+}
+.thumbnails li {
+    position: relative;
+}
+.thumbnails .disabled {
+    opacity: .5;
+}
+.thumbnail .image-container {
+    background: url("../img/153x120.gif") no-repeat center center;
+    background-size: 100%;
+    pointer-events: none;
+}
+.thumbnail img {
+    pointer-events: none;
+}
+.selected, .thumbnail.selected:hover {
+    border-color: #666;
+}
+
+.uploading {
+    border-color: #FF0000;
+}
+.thumbnails .image-container {
+    width: 153px;
+    height: 120px;
+    overflow: hidden;
+    text-align: center;
+}
+.thumbnail:hover {
+    text-decoration: none;
+}
+.thumbnails .loading {
+    position: absolute;
+    /*background: url('ajax-loader.gif') center center no-repeat rgba(255,255,255,.5);*/
+    background: rgba(255,255,255, 0);
+    width: 153px;
+    height: 120px;
+    top: 5px;
+    left: 5px;
+    pointer-events: none;
+}
+.thumbnails .loading.done {
+    /*background: url('complete.png') center center no-repeat rgba(255,255,255, 0);*/
+}
+.progress.done {
+    opacity: 0;
+}
+#dropZone {
+    position: fixed;
+    font-size: 200%;
+    padding: 20px 1em;
+    top: 0px;
+    left: 0px;
+}
+#dragDialog {
+    pointer-events: none;
+    float: left;
+    width: 100%;
+    opacity: .5;
+    text-align: center;
+}
+#dropMessage {
+
+}
+#filesInput {
+    display: none;
+}
+#manageFilesGroup {
+    display: inline-block;
+}
+#infoLog {
+    position: absolute;
+    left: 20px;
+    top : 25px;
+}
+.progress .bar.noTransition {
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+}

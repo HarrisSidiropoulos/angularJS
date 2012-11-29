@@ -1,0 +1,4 @@
+# http://enable-cors.org/#how-apache
+Header set Access-Control-Allow-Origin *
+Header set Access-Control-Allow-Methods "GET,POST"
+Header set Access-Control-Allow-Headers "x-prototype-version,x-requested-with, # x-file-name, content-type"

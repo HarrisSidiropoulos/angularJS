@@ -1,0 +1,11 @@
+<div class="s-gallery">
+    <div class="s-gallery-large-image"><img ng-src="{{imagesPath+currentImage.name}}" alt="{{currentImage.description}}" /></div>
+    <div class="s-gallery-list">
+        <ul class="s-gallery-list-container">
+            <li ng-repeat="image in images" ng-click="setImage(image)" class="{{isSelected(image)}}" >
+                <img ng-src="{{imagesPath+image.name}}" alt="{{image.description}}" width="200" height="100" />
+            </li>
+        </ul>
+    </div>
+</div>
+
