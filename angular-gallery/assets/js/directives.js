@@ -49,6 +49,13 @@ angular.module('components', [])
                         scope.currentImage = image;
                         scope.currentImage.selected = true;
                     }
+                    /*
+                    // does not work
+                    compileElement.bind('dblclick', function() {
+                        console.log('dblclick');
+                        $parse(attrs.src).assign(scope, 'assets/data/images.json');
+                    })
+                    */
 
                 }
             }
