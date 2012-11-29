@@ -25,6 +25,7 @@ angular.module('components', [])
                         if (typeof value==="undefined") return;
                         scope.loadImageData(value);
                     });
+
                     scope.$watch("imagesData", function(value) {
                         if (typeof value==="undefined") return;
                         scope.onImageDataSuccess(value);
@@ -49,13 +50,13 @@ angular.module('components', [])
                         scope.currentImage = image;
                         scope.currentImage.selected = true;
                     }
-                    /*
-                    // does not work
+
                     compileElement.bind('dblclick', function() {
                         console.log('dblclick');
+                        if (typeof attrs.src==="undefined") return;
                         $parse(attrs.src).assign(scope, 'assets/data/images.json');
                     })
-                    */
+
 
                 }
             }
