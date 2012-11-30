@@ -58,16 +58,17 @@ angular.module('components', [])
                     })
 
                     function setAttributeValue(attr, value) {
-                        if (typeof attrs[attr]==="undefined") return;
+                        if (typeof attrs[attr]==="undefined") return false;
                         if (attrs[attr].indexOf('{{')==0 && attrs[attr].indexOf('}}')==attrs[attr].length-2) {
                             var bindVar = attrs[attr].substr(2,attrs[attr].length-4);
                             scope.$parent[bindVar] = value;
                             scope.$parent.$apply();
                         } else {
-                            scope.src = value;
+                            scope[attr] = value;
                             attrs.$set(attr, value);
                             scope.$apply();
                         }
+                        return true;
                     }
 
                 }
