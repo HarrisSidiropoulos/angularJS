@@ -4,6 +4,7 @@ angular.module('components', [])
             restrict: 'E',
             scope: {
                 src: "@",
+                srcVar: "=",
                 imagesPath : "@",
                 imagesData: "="
             },
@@ -22,6 +23,11 @@ angular.module('components', [])
                         scope.imagesPath = value;
                     });
                     scope.$watch("src", function(value) {
+                        if (typeof value==="undefined") return;
+                        scope.loadImageData(value);
+                    });
+
+                    scope.$watch("srcVar", function(value) {
                         if (typeof value==="undefined") return;
                         scope.loadImageData(value);
                     });
@@ -52,9 +58,13 @@ angular.module('components', [])
                     }
 
                     compileElement.bind('dblclick', function() {
-                        if (typeof attrs.src==="undefined") return;
-                        setAttributeValue('src', 'assets/data/images.json');
-                        //$parse(attrs.src).assign(scope, 'assets/data/images.json');
+                        if (!setAttributeValue('src', 'assets/data/images.json')) {
+                            if (typeof attrs.srcVar!=="undefined") {
+                                $parse(attrs.srcVar).assign(scope.$parent, 'assets/data/images.json');
+                                scope.$parent.$apply();
+                            }
+                        }
+
                     })
 
                     function setAttributeValue(attr, value) {
