@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6454bdf-c050-4eef-83dc-c684dd9dd156" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/directives.js" afterPath="$PROJECT_DIR$/assets/js/directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -28,7 +27,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="24" selection-start="942" selection-end="942" vertical-scroll-proportion="-18.961538">
+            <state line="22" column="0" selection-start="691" selection-end="691" vertical-scroll-proportion="-13.0">
               <folding />
             </state>
           </provider>
@@ -55,7 +54,7 @@
       <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="55" selection-start="2878" selection-end="2878" vertical-scroll-proportion="0.66785717">
+            <state line="79" column="52" selection-start="3658" selection-end="3658" vertical-scroll-proportion="0.6880952">
               <folding />
             </state>
           </provider>
@@ -474,14 +473,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="24" selection-start="942" selection-end="942" vertical-scroll-proportion="-18.961538">
+        <state line="22" column="0" selection-start="691" selection-end="691" vertical-scroll-proportion="-13.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="55" selection-start="2878" selection-end="2878" vertical-scroll-proportion="0.66785717">
+        <state line="79" column="52" selection-start="3658" selection-end="3658" vertical-scroll-proportion="0.6880952">
           <folding />
         </state>
       </provider>
