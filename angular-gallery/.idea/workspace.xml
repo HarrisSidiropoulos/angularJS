@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6454bdf-c050-4eef-83dc-c684dd9dd156" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/directives.js" afterPath="$PROJECT_DIR$/assets/js/directives.js" />
     </list>
     <ignored path="angular-gallery.iws" />
@@ -23,10 +22,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="24" selection-start="785" selection-end="785" vertical-scroll-proportion="0.47788697">
+            <state line="25" column="24" selection-start="785" selection-end="785" vertical-scroll-proportion="-14.961538">
               <folding />
             </state>
           </provider>
@@ -41,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="32" selection-start="3590" selection-end="3590" vertical-scroll-proportion="0.0">
+            <state line="77" column="32" selection-start="3570" selection-end="3570" vertical-scroll-proportion="0.7488095">
               <folding />
             </state>
           </provider>
@@ -95,9 +94,9 @@
         <option value="$PROJECT_DIR$/assets/data/images2.json" />
         <option value="$PROJECT_DIR$/assets/partials/gallery.html" />
         <option value="$PROJECT_DIR$/assets/css/styles.css" />
-        <option value="$PROJECT_DIR$/assets/js/directives.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/assets/js/directives.js" />
       </list>
     </option>
   </component>
@@ -454,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="32" selection-start="3590" selection-end="3590" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="31" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
@@ -470,7 +462,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="24" selection-start="785" selection-end="785" vertical-scroll-proportion="0.47788697">
+        <state line="25" column="24" selection-start="785" selection-end="785" vertical-scroll-proportion="-14.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="32" selection-start="3570" selection-end="3570" vertical-scroll-proportion="0.7488095">
           <folding />
         </state>
       </provider>
