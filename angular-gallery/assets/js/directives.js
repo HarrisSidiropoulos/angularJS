@@ -69,8 +69,10 @@ angular.module('components', [])
 
                     function setAttributeValue(attr, value) {
                         if (typeof attrs[attr]==="undefined") return false;
-                        if (attrs[attr].indexOf('{{')>=0 && attrs[attr].indexOf('}}')>(attrs[attr].indexOf('{{')+2)) {
-                            var bindVar = attrs[attr].substring(attrs[attr].indexOf('{{')+2,attrs[attr].indexOf('}}'));
+                        var start = attrs[attr].indexOf('{{'),
+                            end = attrs[attr].indexOf('}}');
+                        if (start>=0 && end>start+2) {
+                            var bindVar = attrs[attr].substring(start+2,end);
                             if (typeof scope.$parent[bindVar]!=="undefined") {
                                 scope.$parent[bindVar] = value;
                                 scope.$parent.$apply();
