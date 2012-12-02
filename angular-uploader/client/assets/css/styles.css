@@ -1,6 +1,3 @@
-body {
-
-}
 .caption h5 {
     overflow: hidden;
     white-space: nowrap;
@@ -12,6 +9,7 @@ body {
 }
 #thumbNailsPanel {
     overflow: auto;
+    position: relative;
 }
 
 .thumbnails {
@@ -64,22 +62,27 @@ body {
 .progress.done {
     opacity: 0;
 }
-#dropZone {
-    position: fixed;
-    font-size: 200%;
-    padding: 20px 1em;
-    top: 0px;
-    left: 0px;
-}
+
 #dragDialog {
     pointer-events: none;
-    float: left;
+    position: absolute;
     width: 100%;
+    top: 0px;
+    left: 0px;
+    font-size: 200%;
+    float: left;
     opacity: .5;
     text-align: center;
 }
+#dragMessage {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
 #dropMessage {
-
+    position: absolute;
+    top: 50%;
+    width: 100%;
 }
 #filesInput {
     display: none;
