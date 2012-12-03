@@ -62,6 +62,11 @@ function FileUploaderCTR($scope) {
         } else {
             $scope.selectedFileList = _.reject($scope.selectedFileList, function(f) { return f==file; });
         }
+        event.stopPropagation();
+    }
+    $scope.deselectAll = function() {
+        _.each($scope.selectedFileList, function(file) { file.selected = false; })
+        $scope.selectedFileList = [];
     }
     $scope.isFileSelected = function(file) {
         return file.selected;

@@ -29,7 +29,7 @@
                 <input type="button" id="uploadFilesButton" value="Upload" class="btn primary" ng-class="{disabled : isFileListEmpty()}"/>
             </div>
         </div>
-        <div id="thumbNailsPanel" class="well" s-auto-height s-drop="onDrop()" s-dragover="onDragOver()" s-dragleave="onDragLeave()">
+        <div id="thumbNailsPanel" class="well" s-auto-height ng-click="deselectAll()" s-drop="onDrop()" s-dragover="onDragOver()" s-dragleave="onDragLeave()">
             <ul class="thumbnails">
                 <li ng-repeat="file in fileList">
                     <a class="thumbnail" href="javascript:" ng-click="toggleSelection(file)" ng-class="{selected : isFileSelected(file)}">

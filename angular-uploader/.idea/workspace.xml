@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="edbfad64-5028-4e2b-a489-98c483b80c7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/styles.css" afterPath="$PROJECT_DIR$/client/assets/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" afterPath="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/js/directives/components.js" afterPath="$PROJECT_DIR$/client/assets/js/directives/components.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
     </list>
     <ignored path="angular-uploader.iws" />
@@ -26,10 +24,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="107" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.5012285">
+            <state line="37" column="149" selection-start="2775" selection-end="2775" vertical-scroll-proportion="-19.538462">
               <folding>
                 <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h5#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -38,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUploaderCTR.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FileUploaderCTR.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="32" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0">
+            <state line="65" column="5" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.6964286">
               <folding />
             </state>
           </provider>
@@ -50,7 +48,7 @@
       <file leaf-file-name="components.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/assets/js/directives/components.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="9" selection-start="2637" selection-end="2637" vertical-scroll-proportion="0.0">
+            <state line="9" column="53" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -93,8 +91,8 @@
         <option value="$PROJECT_DIR$/client/assets/js/app.js" />
         <option value="$PROJECT_DIR$/client/assets/js/directives/components.js" />
         <option value="$PROJECT_DIR$/client/assets/css/styles.css" />
-        <option value="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" />
         <option value="$PROJECT_DIR$/client/index.html" />
+        <option value="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" />
       </list>
     </option>
   </component>
@@ -433,13 +431,6 @@
         <state line="3" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.060714286" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/js/directives/components.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="9" selection-start="2637" selection-end="2637" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/js/fileUploadMulti.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="39" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
@@ -454,20 +445,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
+    <entry file="file://$PROJECT_DIR$/client/assets/js/directives/components.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="32" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0">
+        <state line="9" column="53" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="107" selection-start="1746" selection-end="1746" vertical-scroll-proportion="0.5012285">
+        <state line="37" column="149" selection-start="2775" selection-end="2775" vertical-scroll-proportion="-19.538462">
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="5" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.6964286">
+          <folding />
         </state>
       </provider>
     </entry>
