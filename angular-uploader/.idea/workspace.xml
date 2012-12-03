@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="edbfad64-5028-4e2b-a489-98c483b80c7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/styles.css" afterPath="$PROJECT_DIR$/client/assets/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" afterPath="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
     </list>
@@ -28,9 +27,10 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="14" selection-start="3618" selection-end="3618" vertical-scroll-proportion="-14.307693">
+            <state line="28" column="97" selection-start="2065" selection-end="2065" vertical-scroll-proportion="-7.1153846">
               <folding>
                 <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h5#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -40,7 +40,7 @@
       <file leaf-file-name="FileUploaderCTR.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.52619046">
+            <state line="52" column="45" selection-start="1642" selection-end="1642" vertical-scroll-proportion="0.7488095">
               <folding />
             </state>
           </provider>
@@ -67,7 +67,7 @@
       <file leaf-file-name="fileUploadMulti.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/assets/js/fileUploadMulti.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="39" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
+            <state line="451" column="8" selection-start="16231" selection-end="16261" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -76,7 +76,7 @@
       <file leaf-file-name="FileUploader.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/assets/lib/fileUploader/FileUploader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="40" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.0">
+            <state line="14" column="31" selection-start="706" selection-end="706" vertical-scroll-proportion="-9.52">
               <folding />
             </state>
           </provider>
@@ -153,6 +153,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="angular-uploader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-uploader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-uploader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -409,6 +423,7 @@
         <state line="15" column="54" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -460,9 +475,16 @@
         <state line="3" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.060714286" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/js/fileUploadMulti.js">
+    <entry file="file://$PROJECT_DIR$/client/assets/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="39" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
+        <state line="79" column="13" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/lib/fileUploader/FileUploader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="31" selection-start="706" selection-end="706" vertical-scroll-proportion="-9.52">
           <folding />
         </state>
       </provider>
@@ -474,25 +496,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/client/assets/js/fileUploadMulti.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="13" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/lib/fileUploader/FileUploader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="40" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.0">
+        <state line="451" column="8" selection-start="16231" selection-end="16261" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="14" selection-start="3618" selection-end="3618" vertical-scroll-proportion="-14.307693">
+        <state line="28" column="97" selection-start="2065" selection-end="2065" vertical-scroll-proportion="-7.1153846">
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -500,7 +516,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.52619046">
+        <state line="52" column="45" selection-start="1642" selection-end="1642" vertical-scroll-proportion="0.7488095">
           <folding />
         </state>
       </provider>

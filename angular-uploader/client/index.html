@@ -26,17 +26,20 @@
             </div>
             <span id="infoLog" class="label label-info hidden">Total time remaining : <span id="timeRemaining"></span></span>
             <div class="pull-right">
-                <input type="button" id="uploadFilesButton" value="Upload" class="btn primary" ng-class="{disabled : isFileListEmpty()}"/>
+                <input type="button" id="uploadFilesButton" value="{{getUploadButtonValue('Upload','Stop')}}" class="btn primary"
+                       ng-click="toggleUpload()" ng-class="{disabled : !isUploadEnabled()}"/>
             </div>
         </div>
         <div id="thumbNailsPanel" class="well" s-auto-height ng-click="deselectAll()" s-drop="onDrop()" s-dragover="onDragOver()" s-dragleave="onDragLeave()">
             <ul class="thumbnails">
                 <li ng-repeat="file in fileList">
-                    <a class="thumbnail" href="javascript:" ng-click="toggleSelection(file)" ng-class="{selected : isFileSelected(file)}">
+                    <a class="thumbnail" href="javascript:"
+                       ng-click="toggleSelection(file)"
+                       ng-class="{'selected' : isFileSelected(file), 'uploading' : isFileUploading(file), 'disabled': isFileUploaded(file)}">
                         <div class="image-container" style="{{file.imageDataAsStyle}}"></div>
                         <div class="caption">
-                            <div class="progress progress-striped" style="position: relative; height: 5px; top: -5px; left: 0px; margin-bottom: 0px;">
-                                <div class="bar" style="width: 0%;"></div>
+                            <div class="progress progress-striped" style="position: relative; height: 5px; top: -5px; left: 0px; margin-bottom: 0px;" ng-class="{'done': isFileUploaded(file)}">>
+                                <div class="bar" style="{{file.progressStyle}}"></div>
                             </div>
                             <h5 style="margin-top: 4px;">{{file.name}}</h5>
                         </div>

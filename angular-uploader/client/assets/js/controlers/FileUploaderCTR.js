@@ -1,16 +1,60 @@
 'use strict';
 
 function FileUploaderCTR($scope) {
-    $scope.selectedFileList = [];
     $scope.fileList = [];
-    var isObjectDragOver = false;
+    $scope.uploading = false;
+
+    var queueList = [],
+        selectedFileList = [],
+        isObjectDragOver = false,
+        currentFile = null,
+        fileUploader = new FileUploader("../server/upload.php");
+
+    fileUploader.onStateChange = function(event) {
+        var progress = Math.ceil((event.bytesUploaded/event.bytesTotal) * 100);
+        $scope.uploading = true;
+        switch (event.type) {
+            case "checkStart" :
+                break;
+            case "checkComplete" :
+                currentFile.friendlyName = event.fname;
+                break;
+            case "continue" :
+                break;
+            case "stop" :
+                $scope.uploading = currentFile.uploading = false;
+                break;
+            case "progress" :
+                currentFile.uploading = true;
+                currentFile.progressStyle = "width: " + progress + "%;"
+                $scope.$apply();
+                break;
+            case "complete" :
+                currentFile.uploading = false;
+                currentFile.uploaded = true;
+                $scope.startFileUpload();
+                $scope.uploading = queueList.length > 0;
+                $scope.$apply();
+                break;
+            case "warning" :
+                break;
+            case "error" :
+            case "timeout" :
+
+                break;
+        }
+    }
 
     $scope.haveFileAPI = function() {
         return FileUploader.haveFileAPI();
     }
 
+    $scope.getUploadButtonValue = function(upload,stop) {
+        return !$scope.uploading?upload:stop;
+    }
+
     $scope.isSelectedFileListEmpty = function() {
-        return $scope.selectedFileList.length==0;
+        return selectedFileList.length==0;
     }
     $scope.isFileListEmpty = function() {
         return $scope.fileList.length==0;
@@ -23,6 +67,9 @@ function FileUploaderCTR($scope) {
     }
     $scope.isDropMessageVisible = function() {
         return isObjectDragOver && $scope.haveFileAPI();
+    }
+    $scope.isUploadEnabled = function() {
+        return !($scope.isFileListEmpty() || queueList.length==0);
     }
 
     $scope.onDrop = function() {
@@ -45,9 +92,12 @@ function FileUploaderCTR($scope) {
     $scope.addFiles = function(fileList) {
         _.each(fileList, function(file) {
             file.selected = false;
+            file.uploading = false;
+            file.uploaded = false;
             $scope.fileList.push(file);
             loadImage(file);
         })
+        queueList = _.filter($scope.fileList, function(file){ return !file.uploaded; });
     }
     function loadImage(file) {
         if (file.type.match("image.*")) {
@@ -63,21 +113,44 @@ function FileUploaderCTR($scope) {
     $scope.toggleSelection = function(file) {
         file.selected = file.selected?false:true;
         if (file.selected) {
-            $scope.selectedFileList.push(file);
+            selectedFileList.push(file);
         } else {
-            $scope.selectedFileList = _.reject($scope.selectedFileList, function(f) { return f==file; });
+            selectedFileList = _.reject(selectedFileList, function(f) { return f==file; });
         }
         event.stopPropagation();
     }
     $scope.deselectAll = function() {
-        _.each($scope.selectedFileList, function(file) { file.selected = false; })
-        $scope.selectedFileList = [];
+        _.each(selectedFileList, function(file) { file.selected = false; })
+        selectedFileList = [];
     }
     $scope.isFileSelected = function(file) {
         return file.selected;
     }
+    $scope.isFileUploading = function(file) {
+        return file.uploading;
+    }
+    $scope.isFileUploaded = function(file) {
+        return file.uploaded;
+    }
     $scope.removeSelectedFiles = function() {
-        $scope.fileList = _.difference($scope.fileList, $scope.selectedFileList);
-        $scope.selectedFileList = [];
+        $scope.fileList = _.difference($scope.fileList, selectedFileList);
+        selectedFileList = [];
+    }
+    $scope.toggleUpload = function() {
+        if ($scope.uploading) {
+            $scope.stopFileUpload();
+        } else {
+            $scope.startFileUpload();
+        }
+    }
+    $scope.stopFileUpload = function() {
+        currentFile.uploading = false;
+        fileUploader.stopFileUpload();
+    }
+    $scope.startFileUpload = function() {
+        queueList = _.filter($scope.fileList, function(file){ return !file.uploaded; });
+        if (queueList.length==0) return;
+        currentFile = _.first(queueList);
+        fileUploader.startFileUpload(currentFile);
     }
 }
