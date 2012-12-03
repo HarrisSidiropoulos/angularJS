@@ -19,7 +19,7 @@
     <body ng-controller="FileUploaderCTR">
         <div id="toolbar" class="well">
             <div id="manageFilesGroup">
-                <input type="button" id="addFilesBtn" value="Add Files" class="btn" onclick="$('#filesInput').trigger('click')"/>
+                <input type="button" id="addFilesBtn" value="Add Files" class="btn" onclick="$('#filesInput').trigger('click')" ng-class="{disabled : !haveFileAPI()}"/>
                 <input type="file" id="filesInput" class="input-file" s-change="onFileInputSelection()" multiple/>
                 <input type="button" id="removeFilesBtn" value="Remove Selected Files" class="btn"
                        ng-click="removeSelectedFiles()" ng-class="{disabled : isSelectedFileListEmpty()}"/>
@@ -45,6 +45,7 @@
                 </li>
             </ul>
             <div id="dragDialog" s-auto-height ng-class="{hidden : !isDragDialogVisible()}">
+                <p id="supportMessage" ng-class="{hidden : haveFileAPI()}">{This Browser does not support File API}</p>
                 <p id="dragMessage" ng-class="{hidden : !isDragMessageVisible()}">{Drag &amp; drop files here}</p>
                 <p id="dropMessage" ng-class="{hidden : !isDropMessageVisible()}">{Drop files here}</p>
             </div>

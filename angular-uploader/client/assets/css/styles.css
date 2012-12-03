@@ -75,16 +75,12 @@
     opacity: .5;
     text-align: center;
 }
-#dragMessage {
+#supportMessage, #dragMessage, #dropMessage  {
     position: absolute;
     top: 50%;
     width: 100%;
 }
-#dropMessage {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-}
+
 #filesInput {
     display: none;
 }

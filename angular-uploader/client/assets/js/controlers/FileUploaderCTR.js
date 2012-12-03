@@ -5,6 +5,10 @@ function FileUploaderCTR($scope) {
     $scope.fileList = [];
     var isObjectDragOver = false;
 
+    $scope.haveFileAPI = function() {
+        return FileUploader.haveFileAPI();
+    }
+
     $scope.isSelectedFileListEmpty = function() {
         return $scope.selectedFileList.length==0;
     }
@@ -15,13 +19,14 @@ function FileUploaderCTR($scope) {
         return $scope.isFileListEmpty() || isObjectDragOver;
     }
     $scope.isDragMessageVisible = function() {
-        return !isObjectDragOver;
+        return !isObjectDragOver && $scope.haveFileAPI();
     }
     $scope.isDropMessageVisible = function() {
-        return isObjectDragOver;
+        return isObjectDragOver && $scope.haveFileAPI();
     }
 
     $scope.onDrop = function() {
+        if (!$scope.haveFileAPI()) return;
         event.preventDefault();
         isObjectDragOver = false;
         $scope.addFiles(event.dataTransfer.files);
@@ -38,7 +43,7 @@ function FileUploaderCTR($scope) {
     }
 
     $scope.addFiles = function(fileList) {
-        angular.forEach(fileList, function(file) {
+        _.each(fileList, function(file) {
             file.selected = false;
             $scope.fileList.push(file);
             loadImage(file);
