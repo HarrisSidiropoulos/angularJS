@@ -8,24 +8,21 @@
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <script type="text/javascript" src="assets/lib/angular-1.0.2/angular.min.js"></script>
+        <script type="text/javascript" src="assets/lib/underscore/underscore-min.js"></script>
         <script type="text/javascript" src="assets/lib/jquery-1.8.1/jquery-1.8.1.js"></script>
         <script type="text/javascript" src="assets/lib/bootstrap-2.1.1/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/lib/fileUploader/FileUploader.js"></script>
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" src="assets/js/controlers/FileUploaderCTR.js"></script>
         <script type="text/javascript" src="assets/js/directives/components.js"></script>
-
-
-        <!--
-        <script type="text/javascript" src="assets/js/fileUploadMulti.js"></script>
-        -->
     </head>
     <body ng-controller="FileUploaderCTR">
         <div id="toolbar" class="well">
             <div id="manageFilesGroup">
-                <input type="button" id="addFilesBtn" value="Add Files" class="btn"/>
-                <input type="file" id="filesInput" class="input-file" multiple/>
-                <input type="button" id="removeFilesBtn" value="Remove Selected Files" class="btn disabled"/>
+                <input type="button" id="addFilesBtn" value="Add Files" class="btn" onclick="$('#filesInput').trigger('click')"/>
+                <input type="file" id="filesInput" class="input-file" s-change="onFileInputSelection()" multiple/>
+                <input type="button" id="removeFilesBtn" value="Remove Selected Files" class="btn"
+                       ng-click="removeSelectedFiles()" ng-class="{disabled : isSelectedFileListEmpty()}"/>
             </div>
             <span id="infoLog" class="label label-info hidden">Total time remaining : <span id="timeRemaining"></span></span>
             <div class="pull-right">
@@ -35,7 +32,7 @@
         <div id="thumbNailsPanel" class="well" s-auto-height s-drop="onDrop()" s-dragover="onDragOver()" s-dragleave="onDragLeave()">
             <ul class="thumbnails">
                 <li ng-repeat="file in fileList">
-                    <a class="thumbnail" href="javascript:">
+                    <a class="thumbnail" href="javascript:" ng-click="toggleSelection(file)" ng-class="{selected : isFileSelected(file)}">
                         <div class="image-container" style="{{file.imageDataAsStyle}}"></div>
                         <div class="caption">
                             <div class="progress progress-striped" style="position: relative; height: 5px; top: -5px; left: 0px; margin-bottom: 0px;">
@@ -47,9 +44,9 @@
                     <div class="loading hidden"></div>
                 </li>
             </ul>
-            <div id="dragDialog" s-auto-height ng-class="{hidden : !isFileListEmpty()}">
-                <p id="dragMessage" ng-class="{hidden : isDragMessageVisible()}">{Drag &amp; drop files here}</p>
-                <p id="dropMessage" ng-class="{hidden : isDropMessageVisible()}">{Drop files here}</p>
+            <div id="dragDialog" s-auto-height ng-class="{hidden : !isDragDialogVisible()}">
+                <p id="dragMessage" ng-class="{hidden : !isDragMessageVisible()}">{Drag &amp; drop files here}</p>
+                <p id="dropMessage" ng-class="{hidden : !isDropMessageVisible()}">{Drop files here}</p>
             </div>
         </div>
         <div class="modal hide" id="myAlert">

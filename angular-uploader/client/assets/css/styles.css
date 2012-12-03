@@ -10,6 +10,7 @@
 #thumbNailsPanel {
     overflow: auto;
     position: relative;
+    margin-bottom: 0px;
 }
 
 .thumbnails {

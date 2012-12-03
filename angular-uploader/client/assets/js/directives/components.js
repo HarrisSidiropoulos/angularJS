@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('components', [])
     .directive('sAutoHeight', function($http, $parse, $compile) {
         return {
@@ -66,6 +68,18 @@ angular.module('components', [])
             link: function(scope, element, attr) {
                 var fn = $parse(attr.sDragleave);
                 element.bind('dragleave', function(event) {
+                    scope.$apply(function() {
+                        fn(scope, {$event:event});
+                    });
+                });
+            }
+        }
+    })
+    .directive('sChange', function($http, $parse, $compile) {
+        return {
+            link: function(scope, element, attr) {
+                var fn = $parse(attr.sChange);
+                element.bind('change', function(event) {
                     scope.$apply(function() {
                         fn(scope, {$event:event});
                     });
