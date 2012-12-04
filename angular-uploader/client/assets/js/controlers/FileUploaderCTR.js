@@ -1,16 +1,16 @@
 'use strict';
 
 function FileUploaderCTR($scope) {
+    var queueList = [],
+        selectedFileList = [],
+        isObjectDragOver = false,
+        fileUploader = new FileUploader("../server/upload.php");
+
     $scope.fileList = [];
     $scope.uploading = false;
     $scope.currentFile = null;
     $scope.rememberFileOverwriteSetting = false;
     $scope.fileOverwrite = false;
-
-    var queueList = [],
-        selectedFileList = [],
-        isObjectDragOver = false,
-        fileUploader = new FileUploader("../server/upload.php");
 
     fileUploader.fileOverwrite = $scope.fileOverwrite;
 
@@ -154,6 +154,9 @@ function FileUploaderCTR($scope) {
             selectedFileList = _.reject(selectedFileList, function(f) { return f==file; });
         }
         event.stopPropagation();
+    }
+    $scope.getSelectedFileListLength = function() {
+        return selectedFileList.length==0?"":selectedFileList.length.toString()+ " ";
     }
     $scope.deselectAll = function() {
         _.each(selectedFileList, function(file) { file.selected = false; })

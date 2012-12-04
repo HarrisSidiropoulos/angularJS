@@ -27,7 +27,7 @@
                        onclick="$(this).parent().find('input[type=file]').trigger('click')"
                        ng-class="{disabled : !haveFileAPI()}"/>
                 <input type="file" class="input-file" s-change="onFileInputSelection()" multiple/>
-                <input type="button" value="Remove Selected Files" class="btn"
+                <input type="button" value="Remove {{getSelectedFileListLength()}}Selected Files" class="btn"
                        ng-click="removeSelectedFiles()" ng-class="{disabled : isSelectedFileListEmpty()}"/>
             </div>
             <span class="file-uploader-infoLog label label-info hidden">Total time remaining : <span></span></span>
