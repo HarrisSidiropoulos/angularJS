@@ -98,3 +98,6 @@
     -o-transition: color 0 ease-in;
     transition: none;
 }
+.modal {
+    margin-top: -100px;
+}

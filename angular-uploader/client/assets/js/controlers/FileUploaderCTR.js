@@ -3,37 +3,39 @@
 function FileUploaderCTR($scope) {
     $scope.fileList = [];
     $scope.uploading = false;
-    //$scope.modalShown = false;
+    $scope.currentFile = null;
+    $scope.rememberFileOverwriteSetting = false;
+    $scope.fileOverwrite = false;
 
     var queueList = [],
         selectedFileList = [],
         isObjectDragOver = false,
-        currentFile = null,
         fileUploader = new FileUploader("../server/upload.php");
+
+    fileUploader.fileOverwrite = $scope.fileOverwrite;
 
     fileUploader.onStateChange = function(event) {
         var progress = Math.ceil((event.bytesUploaded/event.bytesTotal) * 100);
         $scope.uploading = true;
-        $scope.modalShown = false;
         switch (event.type) {
             case "checkStart" :
                 break;
             case "checkComplete" :
-                currentFile.friendlyName = event.fname;
+                $scope.currentFile.friendlyName = event.fname;
                 break;
             case "continue" :
                 break;
             case "stop" :
-                $scope.uploading = currentFile.uploading = false;
+                $scope.uploading = $scope.currentFile.uploading = false;
                 break;
             case "progress" :
-                currentFile.uploading = true;
-                currentFile.progressStyle = "width: " + progress + "%;"
+                $scope.currentFile.uploading = true;
+                $scope.currentFile.progressStyle = "width: " + progress + "%;"
                 $scope.$apply();
                 break;
             case "complete" :
-                currentFile.uploading = false;
-                currentFile.uploaded = true;
+                $scope.currentFile.uploading = false;
+                $scope.currentFile.uploaded = true;
                 $scope.startFileUpload();
                 $scope.uploading = queueList.length > 0;
                 $scope.$apply();
@@ -42,7 +44,24 @@ function FileUploaderCTR($scope) {
                 break;
             case "error" :
             case "timeout" :
-                $scope.modalShown = true;
+                if (event.errorId==410) {
+                    if ($scope.rememberFileOverwriteSetting) {
+                        if (!$scope.fileOverwrite) {
+                            setTimeout(function() {
+                                $scope.handleFileExists();
+                                $scope.$apply();
+                            }, 100);
+                        } else {
+                            $scope.handleFileExists();
+                        }
+                    } else {
+                        $scope.modalShown = true;
+                        $scope.$apply();
+                    }
+                } else {
+                    $scope.modalShown = true;
+                    $scope.$apply();
+                }
                 break;
         }
     }
@@ -135,9 +154,6 @@ function FileUploaderCTR($scope) {
         return file.uploaded;
     }
     $scope.removeSelectedFiles = function() {
-        console.log($scope.modalShown);
-        $scope.modalShown = true;
-        return;
         $scope.fileList = _.difference($scope.fileList, selectedFileList);
         selectedFileList = [];
     }
@@ -149,13 +165,23 @@ function FileUploaderCTR($scope) {
         }
     }
     $scope.stopFileUpload = function() {
-        currentFile.uploading = false;
+        $scope.currentFile.uploading = false;
         fileUploader.stopFileUpload();
     }
     $scope.startFileUpload = function() {
         queueList = _.filter($scope.fileList, function(file){ return !file.uploaded; });
         if (queueList.length==0) return;
-        currentFile = _.first(queueList);
-        fileUploader.startFileUpload(currentFile);
+        $scope.currentFile = _.first(queueList);
+        fileUploader.startFileUpload($scope.currentFile);
+    }
+    $scope.handleFileExists = function(overwrite) {
+        overwrite = typeof overwrite==="undefined"?$scope.fileOverwrite:overwrite;
+        $scope.modalShown = false;
+        $scope.fileOverwrite = overwrite;
+        fileUploader.fileOverwrite = $scope.fileOverwrite;
+        if (!$scope.fileOverwrite) {
+            $scope.currentFile.uploaded = true;
+        }
+        $scope.startFileUpload();
     }
 }
