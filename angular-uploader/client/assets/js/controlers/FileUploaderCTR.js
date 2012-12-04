@@ -36,6 +36,7 @@ function FileUploaderCTR($scope) {
             case "complete" :
                 $scope.currentFile.uploading = false;
                 $scope.currentFile.uploaded = true;
+                if (!$scope.rememberFileOverwriteSetting) { fileUploader.fileOverwrite = false; }
                 $scope.startFileUpload();
                 $scope.uploading = queueList.length > 0;
                 $scope.$apply();

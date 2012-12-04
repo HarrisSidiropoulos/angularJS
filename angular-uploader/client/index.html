@@ -3,35 +3,41 @@
     <head>
         <title>file uploader</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
         <link rel="stylesheet" href="assets/lib/bootstrap-2.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/lib/bootstrap-2.1.1/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="assets/lib/angular-ui/angular-ui.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
 
-        <script type="text/javascript" src="assets/lib/underscore/underscore-min.js"></script>
         <script type="text/javascript" src="assets/lib/jquery-1.8.1/jquery-1.8.1.js"></script>
         <script type="text/javascript" src="assets/lib/bootstrap-2.1.1/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/lib/fileUploader/FileUploader.js"></script>
+        <script type="text/javascript" src="assets/lib/underscore/underscore-min.js"></script>
         <script type="text/javascript" src="assets/lib/angular-1.0.2/angular.min.js"></script>
         <script type="text/javascript" src="assets/lib/angular-ui/angular-ui.min.js"></script>
+
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" src="assets/js/controlers/FileUploaderCTR.js"></script>
         <script type="text/javascript" src="assets/js/directives/components.js"></script>
     </head>
-    <body ng-controller="FileUploaderCTR">
-        <div id="toolbar" class="well">
-            <div id="manageFilesGroup">
-                <input type="button" id="addFilesBtn" value="Add Files" class="btn" onclick="$('#filesInput').trigger('click')" ng-class="{disabled : !haveFileAPI()}"/>
-                <input type="file" id="filesInput" class="input-file" s-change="onFileInputSelection()" multiple/>
-                <input type="button" id="removeFilesBtn" value="Remove Selected Files" class="btn"
+    <body ng-controller="FileUploaderCTR" class="file-uploader">
+        <div class="well">
+            <div class="file-uploader-manage-files">
+                <input type="button" value="Add Files" class="btn"
+                       onclick="$(this).parent().find('input[type=file]').trigger('click')"
+                       ng-class="{disabled : !haveFileAPI()}"/>
+                <input type="file" class="input-file" s-change="onFileInputSelection()" multiple/>
+                <input type="button" value="Remove Selected Files" class="btn"
                        ng-click="removeSelectedFiles()" ng-class="{disabled : isSelectedFileListEmpty()}"/>
             </div>
-            <span id="infoLog" class="label label-info hidden">Total time remaining : <span id="timeRemaining"></span></span>
+            <span class="file-uploader-infoLog label label-info hidden">Total time remaining : <span></span></span>
             <div class="pull-right">
-                <input type="button" id="uploadFilesButton" value="{{getValue(uploading,'Upload','Stop')}}" class="btn primary"
+                <input type="button" value="{{getValue(uploading,'Upload','Stop')}}" class="btn primary"
                        ng-click="toggleUpload()" ng-class="{disabled : !isUploadEnabled()}"/>
             </div>
         </div>
-        <div id="thumbNailsPanel" class="well" s-auto-height ng-click="deselectAll()" s-drop="onDrop()" s-dragover="onDragOver()" s-dragleave="onDragLeave()">
+        <div class="file-uploader-thumbNails-panel well" s-auto-height ng-click="deselectAll()"
+             s-drop="onDrop()" s-dragover="onDragOver()" s-dragleave="onDragLeave()">
             <ul class="thumbnails">
                 <li ng-repeat="file in fileList">
                     <a class="thumbnail" href="javascript:"
@@ -48,10 +54,10 @@
                     <div class="loading hidden"></div>
                 </li>
             </ul>
-            <div id="dragDialog" s-auto-height ng-class="{hidden : !isDragDialogVisible()}">
-                <p id="supportMessage" ng-class="{hidden : haveFileAPI()}">{This Browser does not support File API}</p>
-                <p id="dragMessage" ng-class="{hidden : !isDragMessageVisible()}">{Drag &amp; drop files here}</p>
-                <p id="dropMessage" ng-class="{hidden : !isDropMessageVisible()}">{Drop files here}</p>
+            <div class="file-uploader-thumbNails-panel-dragDialog" s-auto-height ng-class="{hidden : !isDragDialogVisible()}">
+                <p class="supportMessage" ng-class="{hidden : haveFileAPI()}">{This Browser does not support File API}</p>
+                <p class="dragMessage" ng-class="{hidden : !isDragMessageVisible()}">{Drag &amp; drop files here}</p>
+                <p class="dropMessage" ng-class="{hidden : !isDropMessageVisible()}">{Drop files here}</p>
             </div>
         </div>
 
@@ -65,7 +71,7 @@
             </div>
             <div class="modal-footer">
                 <label class="checkbox inline pull-left">
-                    <input type="checkbox" id="overwriteAllCheckBox" ng-model="rememberFileOverwriteSetting" />
+                    <input type="checkbox" ng-model="rememberFileOverwriteSetting" />
                     Do this action for all conflicts
                 </label>
                 <a href="javascript:" class="btn" ng-click="handleFileExists(false)">No</a>

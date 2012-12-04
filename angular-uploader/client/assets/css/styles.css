@@ -1,53 +1,51 @@
-.caption h5 {
+.file-uploader .caption h5 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     max-width: 134px;
 }
-#toolbar {
-    position: relative;
-}
-#thumbNailsPanel {
+
+.file-uploader-thumbNails-panel {
     overflow: auto;
     position: relative;
     margin-bottom: 0px;
 }
 
-.thumbnails {
+.file-uploader .thumbnails {
     text-align: center;
     /*display: none;*/
 }
-.thumbnails li {
+.file-uploader .thumbnails li {
     position: relative;
 }
-.thumbnails .disabled {
+.file-uploader .thumbnails .disabled {
     opacity: .5;
 }
-.thumbnail .image-container {
+.file-uploader .thumbnail .image-container {
     background: url("../img/153x120.gif") no-repeat center center;
     background-size: 100%;
     pointer-events: none;
 }
-.thumbnail img {
+.file-uploader .thumbnail img {
     pointer-events: none;
 }
-.selected, .thumbnail.selected:hover {
+.file-uploader .selected, .file-uploader .thumbnail.selected:hover {
     border-color: #666;
 }
 
-.uploading {
+.file-uploader .uploading {
     border-color: #FF0000;
 }
-.thumbnails .image-container {
+.file-uploader .thumbnails .image-container {
     width: 153px;
     height: 120px;
     overflow: hidden;
     text-align: center;
 }
-.thumbnail:hover {
+.file-uploader .thumbnail:hover {
     text-decoration: none;
 }
-.thumbnails .loading {
+.file-uploader .thumbnails .loading {
     position: absolute;
     /*background: url('ajax-loader.gif') center center no-repeat rgba(255,255,255,.5);*/
     background: rgba(255,255,255, 0);
@@ -57,14 +55,14 @@
     left: 5px;
     pointer-events: none;
 }
-.thumbnails .loading.done {
+.file-uploader .thumbnails .loading.done {
     /*background: url('complete.png') center center no-repeat rgba(255,255,255, 0);*/
 }
-.progress.done {
+.file-uploader .progress.done {
     opacity: 0;
 }
 
-#dragDialog {
+.file-uploader-thumbNails-panel-dragDialog {
     pointer-events: none;
     position: absolute;
     width: 100%;
@@ -75,29 +73,31 @@
     opacity: .5;
     text-align: center;
 }
-#supportMessage, #dragMessage, #dropMessage  {
+.file-uploader-thumbNails-panel-dragDialog .supportMessage,
+.file-uploader-thumbNails-panel-dragDialog .dragMessage,
+.file-uploader-thumbNails-panel-dragDialog .dropMessage  {
     position: absolute;
     top: 50%;
     width: 100%;
 }
 
-#filesInput {
+.file-uploader-manage-files input[type=file] {
     display: none;
 }
-#manageFilesGroup {
+.file-uploader-manage-files {
     display: inline-block;
 }
-#infoLog {
+.file-uploader-infoLog {
     position: absolute;
     left: 20px;
     top : 25px;
 }
-.progress .bar.noTransition {
+.file-uploader .progress .bar.noTransition {
     -moz-transition: none;
     -webkit-transition: none;
     -o-transition: color 0 ease-in;
     transition: none;
 }
-.modal {
+.file-uploader .modal {
     margin-top: -100px;
 }
