@@ -4,6 +4,8 @@ function FileUploaderCTR($scope) {
     var queueList = [],
         selectedFileList = [],
         isObjectDragOver = false,
+        bytesPerSecond = 0,
+        bytesPerSecondMetr = 0,
         fileUploader = new FileUploader("../server/upload.php");
 
     $scope.fileList = [];
@@ -11,6 +13,7 @@ function FileUploaderCTR($scope) {
     $scope.currentFile = null;
     $scope.rememberFileOverwriteSetting = false;
     $scope.fileOverwrite = false;
+    $scope.timeRemaining = "";
 
     fileUploader.fileOverwrite = $scope.fileOverwrite;
 
@@ -45,15 +48,18 @@ function FileUploaderCTR($scope) {
         $scope.currentFile.friendlyName = event.fname;
     }
     function onUploadProgress(event) {
-        var progress = Math.ceil((event.bytesUploaded/event.bytesTotal) * 100);
+        var progress = Math.floor((event.bytesUploaded/event.bytesTotal) * 100);
         $scope.currentFile.uploading = true;
         $scope.currentFile.progressStyle = "width: " + progress + "%;"
+        $scope.updateTimeRemaining(event);
         $scope.$apply();
     }
     function onUploadStop(event) {
         $scope.uploading = $scope.currentFile.uploading = false;
+        bytesPerSecondMetr = 0;
     }
     function onUploadComplete(event) {
+        bytesPerSecondMetr = 0;
         $scope.currentFile.uploading = false;
         $scope.currentFile.uploaded = true;
         if (!$scope.rememberFileOverwriteSetting) { fileUploader.fileOverwrite = false; }
@@ -201,5 +207,25 @@ function FileUploaderCTR($scope) {
             $scope.currentFile.uploaded = true;
         }
         $scope.startFileUpload();
+    }
+
+    $scope.updateTimeRemaining = function(event) {
+        bytesPerSecond = Math.max(bytesPerSecond, fileUploader.getBytesPerSecond());
+        if (bytesPerSecond!=fileUploader.getBytesPerSecond()) bytesPerSecondMetr++;
+        if (bytesPerSecondMetr==12) bytesPerSecond = fileUploader.getBytesPerSecond();
+
+        var doneList = _.filter($scope.fileList, function(file){ return file.uploaded; }),
+            totalBytes = getTotalBytes($scope.fileList),
+            bytesUploaded = getTotalBytes(doneList)+event.bytesUploaded,
+            t = FileUploader.getUploadTimeRemaining(totalBytes, bytesUploaded, bytesPerSecond);
+
+        $scope.timeRemaining =  t==""?"":t;
+    }
+    function getTotalBytes(list) {
+        var totalSize = 0;
+        _.each(list, function(file) {
+            totalSize += file.size;
+        })
+        return totalSize;
     }
 }

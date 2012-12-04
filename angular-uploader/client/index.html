@@ -22,7 +22,7 @@
     </head>
     <body ng-controller="FileUploaderCTR" class="file-uploader">
         <div class="well">
-            <div class="file-uploader-manage-files">
+            <div class="file-uploader-manage-files" ng-class="{'hidden' : uploading}">
                 <input type="button" value="Add Files" class="btn"
                        onclick="$(this).parent().find('input[type=file]').trigger('click')"
                        ng-class="{disabled : !haveFileAPI()}"/>
@@ -30,7 +30,7 @@
                 <input type="button" value="Remove {{getSelectedFileListLength()}}Selected Files" class="btn"
                        ng-click="removeSelectedFiles()" ng-class="{disabled : isSelectedFileListEmpty()}"/>
             </div>
-            <span class="file-uploader-infoLog label label-info hidden">Total time remaining : <span></span></span>
+            <span class="file-uploader-infoLog label label-info" ng-class="{'hidden' : !uploading}">Total time remaining : <span>{{timeRemaining}}</span></span>
             <div class="pull-right">
                 <input type="button" value="{{getValueIf(uploading,'Upload','Stop')}}" class="btn primary"
                        ng-click="toggleUpload()" ng-class="{disabled : !isUploadEnabled()}"/>
