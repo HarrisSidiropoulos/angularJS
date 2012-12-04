@@ -15,63 +15,77 @@ function FileUploaderCTR($scope) {
     fileUploader.fileOverwrite = $scope.fileOverwrite;
 
     fileUploader.onStateChange = function(event) {
-        var progress = Math.ceil((event.bytesUploaded/event.bytesTotal) * 100);
         $scope.uploading = true;
         switch (event.type) {
             case "checkStart" :
                 break;
             case "checkComplete" :
-                $scope.currentFile.friendlyName = event.fname;
+                onUploadCheckComplete(event);
                 break;
             case "continue" :
                 break;
             case "stop" :
-                $scope.uploading = $scope.currentFile.uploading = false;
+                onUploadStop(event);
                 break;
             case "progress" :
-                $scope.currentFile.uploading = true;
-                $scope.currentFile.progressStyle = "width: " + progress + "%;"
-                $scope.$apply();
+                onUploadProgress(event);
                 break;
             case "complete" :
-                $scope.currentFile.uploading = false;
-                $scope.currentFile.uploaded = true;
-                if (!$scope.rememberFileOverwriteSetting) { fileUploader.fileOverwrite = false; }
-                $scope.startFileUpload();
-                $scope.uploading = queueList.length > 0;
-                $scope.$apply();
+                onUploadComplete(event);
                 break;
             case "warning" :
                 break;
             case "error" :
             case "timeout" :
-                if (event.errorId==410) {
-                    if ($scope.rememberFileOverwriteSetting) {
-                        if (!$scope.fileOverwrite) {
-                            setTimeout(function() {
-                                $scope.handleFileExists();
-                                $scope.$apply();
-                            }, 100);
-                        } else {
-                            $scope.handleFileExists();
-                        }
-                    } else {
-                        $scope.modalShown = true;
-                        $scope.$apply();
-                    }
-                } else {
-                    $scope.modalShown = true;
-                    $scope.$apply();
-                }
+                onUploadError(event);
                 break;
         }
     }
-
+    function onUploadCheckComplete(event) {
+        $scope.currentFile.friendlyName = event.fname;
+    }
+    function onUploadProgress(event) {
+        var progress = Math.ceil((event.bytesUploaded/event.bytesTotal) * 100);
+        $scope.currentFile.uploading = true;
+        $scope.currentFile.progressStyle = "width: " + progress + "%;"
+        $scope.$apply();
+    }
+    function onUploadStop(event) {
+        $scope.uploading = $scope.currentFile.uploading = false;
+    }
+    function onUploadComplete(event) {
+        $scope.currentFile.uploading = false;
+        $scope.currentFile.uploaded = true;
+        if (!$scope.rememberFileOverwriteSetting) { fileUploader.fileOverwrite = false; }
+        $scope.startFileUpload();
+        $scope.uploading = queueList.length > 0;
+        $scope.$apply();
+    }
+    function onUploadError(event) {
+        if (event.errorId==410) {
+            if ($scope.rememberFileOverwriteSetting) {
+                if (!$scope.fileOverwrite) {
+                    setTimeout(function() {
+                        $scope.handleFileExists();
+                        $scope.$apply();
+                    }, 100);
+                } else {
+                    $scope.handleFileExists();
+                }
+            } else {
+                $scope.modalShown = true;
+                $scope.$apply();
+            }
+        } else {
+            $scope.modalShown = true;
+            $scope.$apply();
+        }
+    }
     $scope.haveFileAPI = function() {
         return FileUploader.haveFileAPI();
     }
 
-    $scope.getValue = function(variable,upload,stop) {
+    $scope.getValueIf = function(variable,upload,stop) {
         return !variable?upload:stop;
     }
 

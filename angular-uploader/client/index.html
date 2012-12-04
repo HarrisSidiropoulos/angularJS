@@ -32,7 +32,7 @@
             </div>
             <span class="file-uploader-infoLog label label-info hidden">Total time remaining : <span></span></span>
             <div class="pull-right">
-                <input type="button" value="{{getValue(uploading,'Upload','Stop')}}" class="btn primary"
+                <input type="button" value="{{getValueIf(uploading,'Upload','Stop')}}" class="btn primary"
                        ng-click="toggleUpload()" ng-class="{disabled : !isUploadEnabled()}"/>
             </div>
         </div>

@@ -29,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="79" selection-start="439" selection-end="439" vertical-scroll-proportion="-5.230769">
+            <state line="36" column="18" selection-start="2394" selection-end="2394" vertical-scroll-proportion="-19.538462">
               <folding>
                 <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -51,7 +51,7 @@
       <file leaf-file-name="FileUploaderCTR.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="47" selection-start="6300" selection-end="6300" vertical-scroll-proportion="3.3392856">
+            <state line="77" column="13" selection-start="2561" selection-end="2561" vertical-scroll-proportion="1.606135">
               <folding />
             </state>
           </provider>
@@ -470,7 +470,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="79" selection-start="439" selection-end="439" vertical-scroll-proportion="-5.230769">
+        <state line="36" column="18" selection-start="2394" selection-end="2394" vertical-scroll-proportion="-19.538462">
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -481,7 +481,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="47" selection-start="6300" selection-end="6300" vertical-scroll-proportion="3.3392856">
+        <state line="77" column="13" selection-start="2561" selection-end="2561" vertical-scroll-proportion="1.606135">
           <folding />
         </state>
       </provider>
