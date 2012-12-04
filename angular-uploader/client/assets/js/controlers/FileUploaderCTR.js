@@ -51,7 +51,7 @@ function FileUploaderCTR($scope) {
         var progress = Math.floor((event.bytesUploaded/event.bytesTotal) * 100);
         $scope.currentFile.uploading = true;
         $scope.currentFile.progressStyle = "width: " + progress + "%;"
-        $scope.updateTimeRemaining(event);
+        updateTimeRemaining(event);
         $scope.$apply();
     }
     function onUploadStop(event) {
@@ -209,7 +209,7 @@ function FileUploaderCTR($scope) {
         $scope.startFileUpload();
     }
 
-    $scope.updateTimeRemaining = function(event) {
+    function updateTimeRemaining(event) {
         bytesPerSecond = Math.max(bytesPerSecond, fileUploader.getBytesPerSecond());
         if (bytesPerSecond!=fileUploader.getBytesPerSecond()) bytesPerSecondMetr++;
         if (bytesPerSecondMetr==12) bytesPerSecond = fileUploader.getBytesPerSecond();
