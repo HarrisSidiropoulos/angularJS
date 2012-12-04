@@ -1,3 +1,3 @@
 'use strict';
-angular.module('FileUploaderApp', ['components']);
+angular.module('FileUploaderApp', ['components', 'ui.directives']);
 

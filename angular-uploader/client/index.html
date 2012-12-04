@@ -7,11 +7,12 @@
         <link rel="stylesheet" href="assets/lib/bootstrap-2.1.1/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
 
-        <script type="text/javascript" src="assets/lib/angular-1.0.2/angular.min.js"></script>
         <script type="text/javascript" src="assets/lib/underscore/underscore-min.js"></script>
         <script type="text/javascript" src="assets/lib/jquery-1.8.1/jquery-1.8.1.js"></script>
         <script type="text/javascript" src="assets/lib/bootstrap-2.1.1/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/lib/fileUploader/FileUploader.js"></script>
+        <script type="text/javascript" src="assets/lib/angular-1.0.2/angular.min.js"></script>
+        <script type="text/javascript" src="assets/lib/angular-ui/angular-ui.min.js"></script>
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" src="assets/js/controlers/FileUploaderCTR.js"></script>
         <script type="text/javascript" src="assets/js/directives/components.js"></script>
@@ -23,10 +24,11 @@
                 <input type="file" id="filesInput" class="input-file" s-change="onFileInputSelection()" multiple/>
                 <input type="button" id="removeFilesBtn" value="Remove Selected Files" class="btn"
                        ng-click="removeSelectedFiles()" ng-class="{disabled : isSelectedFileListEmpty()}"/>
+                <input type="button" id="test" value="test Modal" class="btn" ng-click="modalShown=true"/>
             </div>
             <span id="infoLog" class="label label-info hidden">Total time remaining : <span id="timeRemaining"></span></span>
             <div class="pull-right">
-                <input type="button" id="uploadFilesButton" value="{{getUploadButtonValue('Upload','Stop')}}" class="btn primary"
+                <input type="button" id="uploadFilesButton" value="{{getValue(uploading,'Upload','Stop')}}" class="btn primary"
                        ng-click="toggleUpload()" ng-class="{disabled : !isUploadEnabled()}"/>
             </div>
         </div>
@@ -53,22 +55,10 @@
                 <p id="dropMessage" ng-class="{hidden : !isDropMessageVisible()}">{Drop files here}</p>
             </div>
         </div>
-        <div class="modal hide" id="myAlert">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">×</button>
-                <h3>Error</h3>
-            </div>
-            <div class="modal-body">
-                <p>One fine body…</p>
-            </div>
-            <div class="modal-footer">
-                <label class="checkbox inline pull-left">
-                    <input type="checkbox" id="overwriteAllCheckBox" />
-                    Do this action for all conflicts
-                </label>
-                <a href="#" id="cancelBtn" class="btn" data-dismiss="modal">Cancel</a>
-                <a href="#" id="oklBtn" class="btn btn-primary">Ok</a>
-            </div>
+        <div ui-modal class="fade" ng-model="modalShown" id="myModal">
+            Cool, a modal dialog!
+            <a data-dismiss="modal">Close 1</a>
+            <a ng-click="modalShown=false">Close 2</a>
         </div>
 
     </body>

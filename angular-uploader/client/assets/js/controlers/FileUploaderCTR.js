@@ -3,6 +3,7 @@
 function FileUploaderCTR($scope) {
     $scope.fileList = [];
     $scope.uploading = false;
+    //$scope.modalShown = false;
 
     var queueList = [],
         selectedFileList = [],
@@ -13,6 +14,7 @@ function FileUploaderCTR($scope) {
     fileUploader.onStateChange = function(event) {
         var progress = Math.ceil((event.bytesUploaded/event.bytesTotal) * 100);
         $scope.uploading = true;
+        $scope.modalShown = false;
         switch (event.type) {
             case "checkStart" :
                 break;
@@ -40,7 +42,7 @@ function FileUploaderCTR($scope) {
                 break;
             case "error" :
             case "timeout" :
-
+                $scope.modalShown = true;
                 break;
         }
     }
@@ -49,8 +51,8 @@ function FileUploaderCTR($scope) {
         return FileUploader.haveFileAPI();
     }
 
-    $scope.getUploadButtonValue = function(upload,stop) {
-        return !$scope.uploading?upload:stop;
+    $scope.getValue = function(variable,upload,stop) {
+        return !variable?upload:stop;
     }
 
     $scope.isSelectedFileListEmpty = function() {
@@ -133,6 +135,9 @@ function FileUploaderCTR($scope) {
         return file.uploaded;
     }
     $scope.removeSelectedFiles = function() {
+        console.log($scope.modalShown);
+        $scope.modalShown = true;
+        return;
         $scope.fileList = _.difference($scope.fileList, selectedFileList);
         selectedFileList = [];
     }
