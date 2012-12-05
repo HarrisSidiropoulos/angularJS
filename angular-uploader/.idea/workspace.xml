@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edbfad64-5028-4e2b-a489-98c483b80c7c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" afterPath="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" />
     </list>
     <ignored path="angular-uploader.iws" />
@@ -22,10 +23,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="14" selection-start="2519" selection-end="2519" vertical-scroll-proportion="-16.346153">
+            <state line="43" column="55" selection-start="2903" selection-end="2903" vertical-scroll-proportion="0.8980344">
               <folding />
             </state>
           </provider>
@@ -40,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUploaderCTR.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FileUploaderCTR.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="5" selection-start="7728" selection-end="7728" vertical-scroll-proportion="4.634524">
+            <state line="208" column="33" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -61,7 +62,7 @@
       <file leaf-file-name="components.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/assets/js/directives/components.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="28" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
+            <state line="40" column="6" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,24 +72,6 @@
         <entry file="file://$PROJECT_DIR$/client/assets/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="32" column="18" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fileUploadMulti.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/assets/js/fileUploadMulti.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="337" column="56" selection-start="12406" selection-end="12425" vertical-scroll-proportion="-12.88">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUploader.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/assets/lib/fileUploader/FileUploader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="93" selection-start="2052" selection-end="2065" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,6 +134,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -183,86 +167,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-uploader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-uploader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-uploader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-uploader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-uploader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-uploader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../angular-toolbox" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../angular-gallery" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -317,7 +234,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -420,16 +337,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/js/fileUploadMulti.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/lib/fileUploader/FileUploader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="0" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/lib/fileUploader/FileUploader.ts">
@@ -451,24 +364,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/lib/angular-1.0.2/angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12560" column="27" selection-start="410801" selection-end="410801" vertical-scroll-proportion="-13.4">
-          <folding>
-            <marker date="1353317389546" expanded="true" signature="476176:476191" placeholder="{...}" />
-            <marker date="1353317389546" expanded="true" signature="476200:476216" placeholder="{...}" />
-          </folding>
-        </state>
+        <state line="12560" column="27" selection-start="410801" selection-end="410801" vertical-scroll-proportion="-13.4" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/lib/angular-ui/angular-ui.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/lib/angular-ui/angular-ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/js/directives/components.js">
+    <entry file="file://$PROJECT_DIR$/client/assets/lib/fileUploader/FileUploader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
+        <state line="3" column="63" selection-start="251" selection-end="251" vertical-scroll-proportion="0.061668683" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/js/fileUploadMulti.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="329" column="5" selection-start="11985" selection-end="11985" vertical-scroll-proportion="2.3154762" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="18" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -480,44 +403,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/client/assets/js/directives/components.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="18" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/lib/angular-ui/angular-ui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="14" selection-start="2519" selection-end="2519" vertical-scroll-proportion="-16.346153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/lib/fileUploader/FileUploader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="93" selection-start="2052" selection-end="2065" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/js/fileUploadMulti.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="337" column="56" selection-start="12406" selection-end="12425" vertical-scroll-proportion="-12.88">
+        <state line="40" column="6" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="5" selection-start="7728" selection-end="7728" vertical-scroll-proportion="4.634524">
+        <state line="208" column="33" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="55" selection-start="2903" selection-end="2903" vertical-scroll-proportion="0.8980344">
           <folding />
         </state>
       </provider>
