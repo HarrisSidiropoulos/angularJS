@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edbfad64-5028-4e2b-a489-98c483b80c7c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../angular-gallery/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../angular-gallery/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" afterPath="$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js" />
     </list>
     <ignored path="angular-uploader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,10 +23,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="55" selection-start="2903" selection-end="2903" vertical-scroll-proportion="0.8980344">
+            <state line="53" column="54" selection-start="3688" selection-end="3688" vertical-scroll-proportion="-10.038462">
               <folding />
             </state>
           </provider>
@@ -41,19 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUploaderCTR.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FileUploaderCTR.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="208" column="33" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/assets/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
+            <state line="208" column="33" selection-start="6875" selection-end="6875" vertical-scroll-proportion="1.5988095">
               <folding />
             </state>
           </provider>
@@ -62,7 +53,7 @@
       <file leaf-file-name="components.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/assets/js/directives/components.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="6" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0">
+            <state line="30" column="25" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,7 +125,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -169,17 +159,18 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../angular-toolbox" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../angular-gallery" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -398,28 +389,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
+        <state line="1" column="50" selection-start="64" selection-end="77" vertical-scroll-proportion="0.020238096" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="54" selection-start="3688" selection-end="3688" vertical-scroll-proportion="-10.038462">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/js/directives/components.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="6" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.0">
+        <state line="30" column="25" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/js/controlers/FileUploaderCTR.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="208" column="33" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="55" selection-start="2903" selection-end="2903" vertical-scroll-proportion="0.8980344">
+        <state line="208" column="33" selection-start="6875" selection-end="6875" vertical-scroll-proportion="1.5988095">
           <folding />
         </state>
       </provider>

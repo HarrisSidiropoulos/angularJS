@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6454bdf-c050-4eef-83dc-c684dd9dd156" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/partials/gallery.html" afterPath="$PROJECT_DIR$/assets/partials/gallery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../angular-twitter/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../angular-twitter/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../angular-uploader/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../angular-uploader/.idea/workspace.xml" />
     </list>
     <ignored path="angular-gallery.iws" />
@@ -24,15 +24,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="12" selection-start="641" selection-end="641" vertical-scroll-proportion="0.29238328">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="43" selection-start="3762" selection-end="3762" vertical-scroll-proportion="0.0">
+            <state line="53" column="54" selection-start="2305" selection-end="2305" vertical-scroll-proportion="0.37380952">
               <folding />
             </state>
           </provider>
@@ -63,7 +54,7 @@
       <file leaf-file-name="angular-ui.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/lib/angular-ui-0.3.1/angular-ui.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="633" column="8" selection-start="23010" selection-end="23010" vertical-scroll-proportion="0.0">
+            <state line="650" column="28" selection-start="23596" selection-end="23596" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -199,6 +190,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-gallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-gallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -210,13 +219,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -247,6 +256,9 @@
       <setting name="jsFile" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$" coffeescript-run="false">
+      <method />
+    </configuration>
     <configuration default="true" type="XSLT" factoryName="XSLT">
       <option name="myOutputFile" />
       <option name="myOpenOutputFile" value="false" />
@@ -261,9 +273,6 @@
       <OutputType value="CONSOLE" save-to-file="false" />
       <FileType name="XML" />
       <JdkChoice value="FROM_MODULE" />
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$" coffeescript-run="false">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -422,9 +431,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="36" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
@@ -458,13 +465,6 @@
         <state line="5" column="62" selection-start="320" selection-end="320" vertical-scroll-proportion="0.10119048" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/lib/angular-1.0.2/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -475,16 +475,21 @@
         <state line="0" column="0" selection-start="0" selection-end="322" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/lib/angular-ui-0.3.1/angular-ui.js">
+    <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="633" column="8" selection-start="23010" selection-end="23010" vertical-scroll-proportion="0.0">
+        <state line="12" column="16" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+        <state line="17" column="12" selection-start="641" selection-end="641" vertical-scroll-proportion="0.35503685" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/lib/angular-ui-0.3.1/angular-ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="650" column="28" selection-start="23596" selection-end="23596" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -496,16 +501,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="43" selection-start="3762" selection-end="3762" vertical-scroll-proportion="0.0">
+        <state line="9" column="6" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="12" selection-start="641" selection-end="641" vertical-scroll-proportion="0.29238328">
+        <state line="53" column="54" selection-start="2305" selection-end="2305" vertical-scroll-proportion="0.37380952">
           <folding />
         </state>
       </provider>
